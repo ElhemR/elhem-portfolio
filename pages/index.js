@@ -31,19 +31,19 @@ const Index = () => {
             <div className="row full-screen align-items-center">
               <div className="col-lg-6">
                 <div className="type-box">
-                  <h6>Hello, I am</h6>
+                  <h6> {t("slogan")}</h6>
                   <h1 className="font-alt">Elhem Rebhi</h1>
                   <p className="lead">
-                    I Am Passionate <TypingAnimation />
+                  {t("introLine")} <TypingAnimation />
                   </p>
-                  <p>{t("slogan")}</p>
+          
                   <p className="desc">
                   {t("aboutmeParagraph")} <br></br>
                
                   </p>
                   <div className="btn-bar">
                     <a className="px-btn px-btn-theme" download href="Elhem_Rebhi_CV" >
-                      Donwload CV
+                    {t("downloadCV")}
                     </a>
                   </div>
                 </div>

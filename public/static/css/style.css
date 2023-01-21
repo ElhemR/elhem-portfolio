@@ -1312,7 +1312,7 @@ mark {
 }
 @media (min-width: 992px) {
   .about-me .img img {
-    max-width: inherit;
+    max-width: auto;
     float: right;
   }
 }

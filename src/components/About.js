@@ -11,7 +11,7 @@ const About = () => {
             <div className="about-me">
               <div className="img">
                 <div className="img-in">
-                  <img src="static/img/about-me.png" title="" alt="" />
+                  <img src="static/img/aboutme-section.jpeg" title="" alt="" />
                 </div>
               </div>
             </div>
@@ -23,16 +23,14 @@ const About = () => {
               </div>
               <div className="about-text">
                 <h3>
-                  {`I'm`} a Freelancer Front-end Developer with over 3 years of
+                  {`I'm`} a Software Engineer with 5 years of
                   experience.{" "}
                 </h3>
                 <p>
-                  {`I'm`} a Freelancer Front-end Developer with over 3 years of
-                  experience. {`I'm`} from San Francisco. I code and create web
-                  elements for amazing people around the world. I like work with
-                  new people. New people new Experiences.
+                  {`I'm`} a Software Engineer with 5 years of experience. {`I'm`} living in Germany. I have a deep passion for what I am doing, and consider myself lucky enough the job from the 3-item shortlist of my dream jobs as a child. 
+                  Scroll down if you are curious to discover the shortlist and most importantly to know more about me! 
                 </p>
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-auto">
                     <div className="media align-items-center">
                       <span className="count">5k</span>
@@ -51,7 +49,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="btn-bar">
                   <a className="px-btn px-btn-theme" href="#">
                     <span>Contact Me</span>

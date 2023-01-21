@@ -1,12 +1,16 @@
 import { Fragment, useEffect, useRef } from "react";
 import Typed from "typed.js";
+import useTranslation from "../../intl/useTranslation"
 const TypingAnimation = () => {
   // Create Ref element.
   const el = useRef(null);
+  const { t } = useTranslation()
 
   useEffect(() => {
+    console.log( t("introLineDesc"))
     const typed = new Typed(el.current, {
-      strings: ["Software Engineer", "Web Developer", "Human"], // Strings to display
+      strings:  t("introLineDesc"),
+      //["Software Engineer", "Web Developer", "Human"] Strings to display
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 100,
@@ -19,7 +23,7 @@ const TypingAnimation = () => {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, t("introLineDesc"),[]);
   return (
     <Fragment>
       <span id="type-it" className="subtitle subtitle-typed" ref={el}></span>

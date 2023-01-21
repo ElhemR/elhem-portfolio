@@ -81,7 +81,7 @@ const Header = ({ blog }) => {
           <a href="https://www.linkedin.com/in/elhemrebhi/" target='_blank'  rel="noreferrer" >
             <i className="fab fa-linkedin-in" />
           </a>
-          <a href="https://github.com/elhemr" target='_blank'>
+          <a href="https://github.com/elhemr" target='_blank' rel="noreferrer">
             <i className="fab fa-github" />
           </a>
         </div>
