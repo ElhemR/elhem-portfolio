@@ -68,17 +68,17 @@ const Header = ({ blog }) => {
           {blog ? <MenuWithBlog /> : <MenuWithOutBlog />}
         </div>
       
-        <div className="nav justify-content-center social-icons" target='_blank'>
+        <div className="nav justify-content-center social-icons" target='_blank'  rel="noreferrer" >
           <a href="https://www.facebook.com/elhemrebhi">
             <i className="fab fa-facebook-f" />
           </a>
-          <a href="https://twitter.com/ElhemRebhi" target='_blank'>
+          <a href="https://twitter.com/ElhemRebhi" target='_blank'  rel="noreferrer" >
             <i className="fab fa-twitter" />
           </a>
-          <a href="https://www.instagram.com/elhem.rebhi/" target='_blank'>
+          <a href="https://www.instagram.com/elhem.rebhi/" target='_blank'  rel="noreferrer" >
             <i className="fab fa-instagram" />
           </a>
-          <a href="https://www.linkedin.com/in/elhemrebhi/" target='_blank'>
+          <a href="https://www.linkedin.com/in/elhemrebhi/" target='_blank'  rel="noreferrer" >
             <i className="fab fa-linkedin-in" />
           </a>
           <a href="https://github.com/elhemr" target='_blank'>
