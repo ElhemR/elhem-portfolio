@@ -13,7 +13,20 @@ const Header = ({ blog }) => {
     }
   }, []);
 
+  const [locale, setLocale] = useContext(LanguageContext)
+  console.log(locale)
+  const router = useRouter()
+  function handleLocaleChange(language) {
+    if (!window) {
+      return
+    }
 
+    const regex = new RegExp(`^/(${locales.join("|")})`)
+    localStorage.setItem("lang", language) // This line saves the language option!
+    setLocale(language)
+
+    router.push(router.pathname, router.asPath.replace(regex, `/${language}`))
+  }
   return (
     
     <Fragment>
@@ -48,27 +61,28 @@ const Header = ({ blog }) => {
               <div className="img">
                 <img src="static/img/about-me.jpg" title="" alt="" style={{marginTop: "-15px"}}/>
               </div>
-              <h5>Elhem</h5>
+              <h5 style={{marginBottom: "10px" }} >Elhem</h5>
+            <a style={{cursor: "pointer", letterSpacing: "7px",fontWeight: locale==="en" ? 500:100}} onClick={() => handleLocaleChange("en")}>EN</a> |  <a style={{cursor: "pointer", letterSpacing: "7px",fontWeight: locale==="de" ? 500:100}} onClick={() => handleLocaleChange("de")}>DE</a>
             </div>
           </div>
           {blog ? <MenuWithBlog /> : <MenuWithOutBlog />}
         </div>
       
-        <div className="nav justify-content-center social-icons">
-          <a href="#">
+        <div className="nav justify-content-center social-icons" target='_blank'>
+          <a href="https://www.facebook.com/elhemrebhi">
             <i className="fab fa-facebook-f" />
           </a>
-          <a href="#">
+          <a href="https://twitter.com/ElhemRebhi" target='_blank'>
             <i className="fab fa-twitter" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/elhem.rebhi/" target='_blank'>
             <i className="fab fa-instagram" />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/elhemrebhi/" target='_blank'>
             <i className="fab fa-linkedin-in" />
           </a>
-          <a href="#">
-            <i className="fab fa-pinterest" />
+          <a href="https://github.com/elhemr" target='_blank'>
+            <i className="fab fa-github" />
           </a>
         </div>
    
@@ -80,6 +94,7 @@ export default Header;
 
 const MenuWithOutBlog = () => {
   const [locale, setLocale] = useContext(LanguageContext)
+  console.log(locale)
   const router = useRouter()
   function handleLocaleChange(language) {
     if (!window) {
@@ -94,14 +109,11 @@ const MenuWithOutBlog = () => {
   }
   return (
     <ul className="nav nav-menu" id="pp-menu">
-         <div className="lang">
-        <button onClick={() => handleLocaleChange("en")}>EN</button>
-        <button onClick={() => handleLocaleChange("pt")}>PT</button>
-      </div>
+     
       <li data-menuanchor="home" className="active">
         <a className="nav-link" href="#home">
           <i className="ti-home" />
-          <span>Hodme</span>
+          <span>Home</span>
         </a>
       </li>
       <li data-menuanchor="about">

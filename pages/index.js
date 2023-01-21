@@ -38,11 +38,7 @@ const Index = () => {
                   </p>
                   <p>{t("slogan")}</p>
                   <p className="desc">
-                    I am a software engineer who is passionate about learning, 
-                    mastering new things, and enjoys every step of this process.
-                    I love the frontend side as art and colors are a part of 
-                    my heart and mind, as well as the backend side with a 
-                    deep interest in the world of data. <br></br>
+                  {t("aboutmeParagraph")} <br></br>
                
                   </p>
                   <div className="btn-bar">
@@ -53,8 +49,9 @@ const Index = () => {
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="quotehome" style={{marginTop: "-4vh", paddingLeft: "0px" , position:"absolute", right:"-10vw", fontSize: "1.2em",fontWeight:"400"}} > <q>Learn how to see. Realize that everything connects to everything else.</q> <br></br>&mdash; Leonardo Davinci
-                </div>
+                <div className="quotehome" dangerouslySetInnerHTML={{ __html: t("quoteHomePage") }}   style={{marginTop: "-4vh", paddingLeft: "0px" , position:"absolute", right:"-10vw", fontSize: "1.2em",fontWeight:"400"}} > 
+       
+                </div> 
                 <div className="hb-img">
                   <img src="static/img/home-banner.png" title="" alt="elhem_main_photo" />
                 </div>
