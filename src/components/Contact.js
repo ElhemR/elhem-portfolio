@@ -1,6 +1,8 @@
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import useTranslation from "../../intl/useTranslation"
 const Contact = () => {
+  const { t } = useTranslation()
   const [mailData, setMailData] = useState({
     name: "",
     email: "",
@@ -54,37 +56,36 @@ const Contact = () => {
     >
       <div className="container">
         <div className="title">
-          <h3>Get in touch.</h3>
+          <h3>{t("contactSectionTitle")}</h3>
         </div>
         <div className="row">
           <div className="col-lg-5 col-xl-4 m-15px-tb">
             <div className="contact-info">
-              <h4>What’s your story? Get in touch</h4>
+              <h4>{t("contactSectionDetailed")}</h4>
               <p>
-                Always available for freelancing if the right project comes
-                along, Feel free to contact me.
+              {t("contactSectionDescription")}
               </p>
               <ul>
                 <li className="media">
                   <i className="ti-map" />
                   <span className="media-body">
-                    123 Stree New York City , United States Of America 750065.
+                      Darmstadt, Hessen - Germany
                   </span>
                 </li>
                 <li className="media">
                   <i className="ti-email" />
-                  <span className="media-body">support@domain.com</span>
+                  <span className="media-body">rebhielhem@gmail.com</span>
                 </li>
                 <li className="media">
                   <i className="ti-mobile" />
-                  <span className="media-body">+044 9696 9696 3636</span>
+                  <span className="media-body">+4917631747220</span>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-lg-7 col-xl-8 m-15px-tb">
             <div className="contact-form">
-              <h4>Say Something</h4>
+              <h4>  {t("emailFormTitle")}</h4>
               <form id="contact-form" onSubmit={(e) => onSubmit(e)}>
                 <div className="row">
                   <div className="col-md-6">
@@ -187,7 +188,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-12">
-            <div className="google-map">
+            {/* <div className="google-map">
               <div className="embed-responsive embed-responsive-21by9">
                 <iframe
                   className="embed-responsive-item"
@@ -195,7 +196,7 @@ const Contact = () => {
                   allowFullScreen=""
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

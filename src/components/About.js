@@ -1,4 +1,6 @@
+import useTranslation from "../../intl/useTranslation"
 const About = () => {
+  const { t } = useTranslation()
   return (
     <section
       id="about"
@@ -19,16 +21,14 @@ const About = () => {
           <div className="col-lg-6 m-15px-tb">
             <div className="about-info">
               <div className="title">
-                <h3>About me.</h3>
+                <h3> {t("aboutmeSectionTitle")}</h3>
               </div>
               <div className="about-text">
                 <h3>
-                  {`I'm`} a Software Engineer with 5 years of
-                  experience.{" "}
+                 {t("aboutmeSection")}
                 </h3>
                 <p>
-                  {`I'm`} a Software Engineer with 5 years of experience. {`I'm`} living in Germany. I have a deep passion for what I am doing, and consider myself lucky enough the job from the 3-item shortlist of my dream jobs as a child. 
-                  Scroll down if you are curious to discover the shortlist and most importantly to know more about me! 
+                {t("aboutmeDetailedSection")}
                 </p>
                 {/* <div className="row">
                   <div className="col-auto">
@@ -52,11 +52,11 @@ const About = () => {
                 </div> */}
                 <div className="btn-bar">
                   <a className="px-btn px-btn-theme" href="#">
-                    <span>Contact Me</span>
+                    <span>{t("contactMeButton")}</span>
                   </a>
-                  <a className="px-btn px-btn-theme" href="#">
+                  {/* <a className="px-btn px-btn-theme" href="#">
                     <span>Portfolio</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -64,69 +64,61 @@ const About = () => {
         </div>
         <div className="separated" />
         <div className="title">
-          <h3>Education &amp; Skills</h3>
+          <h3> {t("educationAndSkillsTitle")}</h3>
         </div>
         <div className="row">
           <div className="col-lg-4 m-15px-tb">
             <ul className="aducation-box">
               <li>
-                <span>2010-2012</span>
-                <h6>Graphic Designer</h6>
-                <p>International Design Institute</p>
+                <span>2015-2018</span>
+                <h6>Computer Science and Engineering Diploma</h6>
+                <p>University of Tunis El Manar</p>
               </li>
               <li>
-                <span>2010-2012</span>
-                <h6>Web Development</h6>
-                <p>International Design Institute</p>
-              </li>
-              <li>
-                <span>2010-2012</span>
-                <h6>Search Engine Optimization</h6>
-                <p>International Design Institute</p>
+                <span>2013-2015</span>
+                <h6>Preparatory classes for CSE: Mathematics and Physics studies</h6>
+                <p>University of Carthage</p>
               </li>
             </ul>
           </div>
           <div className="col-lg-7 ml-auto m-15px-tb">
             <div className="skills-box">
-              <h3>My skills</h3>
+              <h3>    {t("mySkills")} </h3>
               <p>
-                {`I'm`} a Freelancer Front-end Developer with over 3 years of
-                experience. I code and create web elements for amazing people
-                around the world. I like work with new people. New people new
-                Experiences.
+              {t("mySkillsDetailed")} 
               </p>
               <div className="skill-lt">
-                <h6>HTML5</h6>
+                <h6>Frontend</h6>
                 <div className="skill-bar">
-                  <div className="skill-bar-in" style={{ width: "92%" }}>
-                    <span data-toggle="tooltip" title="92%" />
+                  <div className="skill-bar-in" style={{ width: "85%" }}>
+                    <span data-toggle="tooltip" title="80%" />
                   </div>
                 </div>
               </div>
               {/* /skill */}
               <div className="skill-lt">
-                <h6>WordPress</h6>
+                <h6>Backend</h6>
                 <div className="skill-bar">
-                  <div className="skill-bar-in" style={{ width: "72%" }}>
-                    <span data-toggle="tooltip" title="72%" />
+                  <div className="skill-bar-in" style={{ width: "80%" }}>
+                    <span data-toggle="tooltip" title="80%" />
                   </div>
                 </div>
               </div>
               {/* /skill */}
               <div className="skill-lt">
-                <h6>Magento</h6>
+                <h6>Data</h6>
                 <div className="skill-bar">
-                  <div className="skill-bar-in" style={{ width: "86%" }}>
-                    <span data-toggle="tooltip" title="86%" />
+                  <div className="skill-bar-in" style={{ width: "80%" }}>
+                    <span data-toggle="tooltip" title="80%" />
                   </div>
                 </div>
               </div>
               {/* /skill */}
               <div className="skill-lt">
-                <h6>UI/UX</h6>
+                <h6>DevOps</h6>
                 <div className="skill-bar">
-                  <div className="skill-bar-in" style={{ width: "88%" }}>
-                    <span data-toggle="tooltip" title="88%" />
+                  <div className="skill-bar-in" style={{ width: "60%" }}>
+                    <span data-toggle="tooltip" title="60%" />
                   </div>
                 </div>
               </div>
@@ -134,7 +126,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="separated" />
+        {/* <div className="separated" />
         <div className="title">
           <h3>Experience.</h3>
         </div>
@@ -208,8 +200,8 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>*/}
+      </div> 
     </section>
   );
 };
