@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     <LanguageProvider>
     <Fragment>
       <Head>
-        <title>Sergio - Portfolio Template</title>
+        <title> yours, elhem - Elhem Rebhi Portfolio</title>
         {/* <!-- Favicon --> */}
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
