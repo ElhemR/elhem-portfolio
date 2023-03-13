@@ -37,7 +37,7 @@ const Index = () => {
                   {t("introLine")} <TypingAnimation />
                   </p>
           
-                  <p className="desc"  style={{color: "white"}}>
+                  <p className="desc">
                   {t("aboutmeParagraph")} <br></br>
                
                   </p>
