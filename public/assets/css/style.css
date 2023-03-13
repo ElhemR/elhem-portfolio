@@ -1536,5 +1536,11 @@ mark {
           padding-top: 55%; } }
 
 
-
 /*# sourceMappingURL=../../static/css/style.css.map */
+.quotehome {
+  margin-top: "-4vh"; 
+  padding-left: "0px" ; 
+  position:"absolute";
+  right:"-10vw"; font-size: "1.2em" ;
+  font-weight:"400"
+}

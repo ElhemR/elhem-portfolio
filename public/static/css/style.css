@@ -1156,10 +1156,14 @@ mark {
   border-radius: 50%;
   /* background: #0b0b13; /* james webb */
   background-image: url("../img/deep-field.jpeg") ;
+
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
+@media (max-width: 767px){
+
+} 
 .theme-light .home-banner:after {
   background: #f7f7ff;
 }
@@ -1877,4 +1881,13 @@ mark {
   }
 }
 
+.quotehome {
+  margin-top: "-4vh"; 
+  padding-left: "0px" ; 
+  position:"absolute";
+  right:"-10vw"; font-size: "1.2em" ;
+  font-weight:"400"
+}
+
 /*# sourceMappingURL=style.css.map */
+

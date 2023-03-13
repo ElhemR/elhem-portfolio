@@ -37,7 +37,7 @@ const Index = () => {
                   {t("introLine")} <TypingAnimation />
                   </p>
           
-                  <p className="desc">
+                  <p className="desc"  style={{color: "white"}}>
                   {t("aboutmeParagraph")} <br></br>
                
                   </p>
@@ -49,7 +49,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="quotehome" dangerouslySetInnerHTML={{ __html: t("quoteHomePage") }}   style={{marginTop: "-4vh", paddingLeft: "0px" , position:"absolute", right:"-10vw", fontSize: "1.2em",fontWeight:"400"}} > 
+                <div className="quotehome" dangerouslySetInnerHTML={{ __html: t("quoteHomePage") }}> 
        
                 </div> 
                 <div className="hb-img">
