@@ -10,14 +10,22 @@ import Services from "../src/components/Services";
 import TypingAnimation from "../src/components/TypingAnimation";
 import Layout from "../src/layout/Layout"
 import Link from "next/link";
+import DownloadLink from "react-download-link";
 
+
+import { saveAs } from 'file-saver';
 
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
 const Index = () => {
   const { t } = useTranslation()
-
+  const downloadCV= () => {
+    const element = document.createElement("a");
+    element.href = "./files/Elhem_Rebhi_CV.pdf";
+    element.download = "Elhem_Rebhi_CV.pdf";
+    element.click();
+  };
   return (
     <Layout>
         
@@ -42,9 +50,10 @@ const Index = () => {
                
                   </p>
                   <div className="btn-bar">
-                    <a className="px-btn px-btn-theme" download href="Elhem_Rebhi_CV" >
+                    <a className="px-btn px-btn-theme"        onClick={downloadCV} >
                     {t("downloadCV")}
                     </a>
+
                   </div>
                 </div>
               </div>
